@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="dark-blue-background" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SignUp">
+   <children>
+      <Button layoutX="55.0" layoutY="325.0" mnemonicParsing="false" onAction="#addUser" prefHeight="38.0" prefWidth="272.0" text="Sign up" textAlignment="CENTER">
+         <font>
+            <Font name="Droid Sans Mono" size="13.0" />
+         </font></Button>
+      <Label layoutX="45.0" layoutY="57.0" textFill="#676262">
+         <font>
+            <Font name="Droid Sans" size="13.0" />
+         </font></Label>
+      <PasswordField fx:id="passwordField" layoutX="55.0" layoutY="108.0" prefHeight="38.0" prefWidth="272.0" promptText="Password">
+         <font>
+            <Font size="13.0" />
+         </font></PasswordField>
+      <PasswordField fx:id="confirmPasswordField" layoutX="55.0" layoutY="163.0" prefHeight="38.0" prefWidth="272.0" promptText="Confirm Password">
+         <font>
+            <Font size="13.0" />
+         </font></PasswordField>
+      <Label layoutX="47.0" layoutY="119.0" textFill="#676262">
+         <font>
+            <Font name="Droid Sans" size="13.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="182.0" textFill="#676262">
+         <font>
+            <Font name="Droid Sans" size="13.0" />
+         </font></Label>
+      <TextField fx:id="usernameField" layoutX="55.0" layoutY="54.0" prefHeight="38.0" prefWidth="272.0" promptText="Username">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="firstNameField" layoutX="55.0" layoutY="219.0" prefHeight="38.0" prefWidth="272.0" promptText="FirstName">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="lastNameField" layoutX="55.0" layoutY="270.0" prefHeight="38.0" prefWidth="272.0" promptText="LastName">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Label layoutX="55.0" layoutY="242.0" textFill="#676262">
+         <font>
+            <Font name="Droid Sans" size="13.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="309.0" textFill="#676262">
+         <font>
+            <Font name="Droid Sans Mono" size="13.0" />
+         </font></Label>
+      <Label layoutX="107.0" layoutY="14.0" text="Create An Account" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="428.0" fitWidth="220.0" layoutX="381.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../photos/mnt.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

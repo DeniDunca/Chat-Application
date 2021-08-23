@@ -1,0 +1,13 @@
+.dark-blue-background{
+    -fx-background-color: #448ecf;
+}
+
+.light-blue-background{
+    -fx-background-color: #9ecaf0;
+}
+.light-grey-background{
+    -fx-background-color: #c8cde0;
+}
+.white-background{
+    -fx-background-color: #ffffff;
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindow">
+   <left>
+      <HBox prefHeight="400.0" prefWidth="169.0" styleClass="light-blue-background" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="38.0" spacing="20.0" styleClass="dark-blue-background" stylesheets="@../values/style.css">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../photos/loupe.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="7.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="imagePlus" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#addUsers" onMouseEntered="#whenHoverEnterPlus" onMouseExited="#whenHoverExitPlus" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="7.0" top="170.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../photos/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageFriends" fitHeight="31.0" fitWidth="26.0" onMouseClicked="#setFriendList" onMouseEntered="#whenHoverEnterFriends" onMouseExited="#whenHoverExitFriends" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../photos/friends.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="7.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="imageBubble" fitHeight="31.0" fitWidth="27.0" onMouseClicked="#showListMessages" onMouseEntered="#whenHoverEnterBubble" onMouseExited="#whenHoverExitBubble" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../photos/speech-bubbles-with-ellipsis.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="7.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="logOutButton" fitHeight="24.0" fitWidth="23.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#logOutPressed" onMouseEntered="#whenHoverEnterLogOut" onMouseExited="#whenHoverExitLogOut" pickOnBounds="true">
+                     <image>
+                        <Image url="@../photos/logout.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="7.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="131.0">
+               <children>
+                  <TextField fx:id="searchBar" onKeyPressed="#filterList" prefHeight="42.0" prefWidth="122.0" promptText="Search" stylesheets="@../values/style.css" />
+                  <ListView fx:id="listView" onMouseClicked="#displayMessages" prefHeight="357.0" prefWidth="131.0" styleClass="light-blue-background" stylesheets="@../values/style.css" />
+               </children>
+            </VBox>
+         </children></HBox>
+   </left>
+   <right>
+      <BorderPane prefHeight="400.0" prefWidth="431.0" styleClass="light-grey-background" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="42.0" prefWidth="430.0" styleClass="white-background" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelUser">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../photos/check.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="42.0" prefWidth="430.0" styleClass="white-background" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="textField" prefHeight="48.0" prefWidth="382.0" promptText="Message">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="imageSend" fitHeight="30.0" fitWidth="32.0" onMouseClicked="#sendMessage" onMouseEntered="#whenHoverEnterSend" onMouseExited="#whenHoverExitSend" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../photos/send.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="9.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </bottom>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <center>
+            <TextArea fx:id="messageArea" editable="false" opacity="0.54" prefHeight="263.0" prefWidth="386.0" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextArea>
+         </center>
+      </BorderPane>
+   </right>
+</BorderPane>

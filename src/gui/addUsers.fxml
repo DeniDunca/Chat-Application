@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" styleClass="dark-blue-background" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddUsers">
+   <children>
+      <ListView fx:id="listView" layoutX="37.0" layoutY="81.0" prefHeight="238.0" prefWidth="325.0" />
+      <Button layoutX="37.0" layoutY="334.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="38.0" prefWidth="326.0" stylesheets="@../values/style.css" text="Add friend">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <TextField fx:id="searchBar" layoutX="37.0" layoutY="30.0" onKeyPressed="#filterUsers" prefHeight="37.0" prefWidth="326.0" promptText="Search">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>
