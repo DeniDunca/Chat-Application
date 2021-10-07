@@ -56,7 +56,7 @@
             </VBox>
             <VBox prefHeight="400.0" prefWidth="131.0">
                <children>
-                  <TextField fx:id="searchBar" onKeyPressed="#filterList" prefHeight="42.0" prefWidth="122.0" promptText="Search" stylesheets="@../values/style.css" />
+                  <TextField fx:id="searchBar" onKeyTyped="#filterList" prefHeight="42.0" prefWidth="122.0" promptText="Search" stylesheets="@../values/style.css" />
                   <ListView fx:id="listView" onMouseClicked="#displayMessages" prefHeight="357.0" prefWidth="131.0" styleClass="light-blue-background" stylesheets="@../values/style.css" />
                </children>
             </VBox>

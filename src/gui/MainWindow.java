@@ -74,6 +74,7 @@ public class MainWindow implements Observer {
         Subject subject = Subject.getInstance();
         subject.addObserver(this);
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
     }
 
     public void addUsers(){

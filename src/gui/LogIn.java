@@ -41,7 +41,7 @@ public class LogIn {
 
             MainWindow mainWindow = fxmlLoader.getController();
             mainWindow.setUser(username,password);
-
+            mainWindow.showListMessages();
             Stage stage = new Stage();
             stage.setScene(new Scene(root,600,400));
             //stage.setTitle("Welcome!");

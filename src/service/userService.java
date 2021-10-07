@@ -21,7 +21,7 @@ public class userService {
     public ArrayList<User> filterUsers(ArrayList<User> users,String string){
         //ArrayList<User> filteredUsers = new ArrayList<>();
         users = (ArrayList<User>) users.stream()
-                .filter(u -> u.getFirstName().startsWith(string) || u.getLastName().startsWith(string))
+                .filter(u -> (u.getFirstName() + " " + u.getLastName()).contains(string))
                 .collect(Collectors.toList());
 
         return users;
